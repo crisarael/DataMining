@@ -1,2 +1,2 @@
 # DataMining
-Practicas en minería de datos
+Funciones encontradas en R
