@@ -32,6 +32,36 @@ ncaracteres
 #10.Crear lista
 lista<-list("Carro","Casa","Bicicleta")
 
+#11.Obtener el alor absoluto
+abs(-1)
 
+#12. Redondear
+round(15.6876,2)
+
+#13.Obtener el factorial de un numero
+factorial(4)
+
+#14. Muestra detalles de objetos en memoria
+ls.str()
+
+#15.Redondear hacia abajo
+floor(9.4)
+#16. Permite mostrar un grafico
+layout(matrix(1:4, 2, 2))
+layout.show(4)
+
+#17.Redondear hacia arriba
+ceiling(9.9)
+
+#18. Producto de los elementos
+prod(5,5)
+
+#19.Converir texto a mayusculas
+texto <- toupper("Texto en mayusculas")
+texto
+
+#20.Converir texto a minusculas
+TextoMinusculas <- tolower("Texto en minusculas")
+print(TextoMinusculas)
 
 
