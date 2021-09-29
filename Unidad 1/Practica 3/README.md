@@ -1,4 +1,4 @@
-# Practica 1
+# Practica 3
 Escenario: usted es un científico de datos que trabaja para una empresa de consultoría.
 Uno de sus compañeros del Departamento de Auditoría le ha pedido
 para ayudarles a evaluar el estado financiero de la organización X.
