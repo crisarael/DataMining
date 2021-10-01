@@ -103,11 +103,28 @@ myplot(FreeThrows/Games)
 
 #Part 1 - Free Throw Attempts Per Game 
 #(You will need the Games matrix)
-myplot(_/_)
+myplot(FTattempts/Games)
 #Notice how Chris Paul gets few attempts per game
 
 #Part 2 - Free Throw Accuracy
-myplot(_/_)
+KobeBryant_FG <- c(978,813,775,800,716,740,574,738,31,266)
+JoeJohnson_FG <- c(632,536,647,620,635,514,423,445,462,446)
+LeBronJames_FG <- c(875,772,794,789,768,758,621,765,767,624)
+CarmeloAnthony_FG <- c(756,691,728,535,688,684,441,669,743,358)
+DwightHoward_FG <- c(468,526,583,560,510,619,416,470,473,251)
+ChrisBosh_FG <- c(549,543,507,615,600,524,393,485,492,343)
+ChrisPaul_FG <- c(407,381,630,631,314,430,425,412,406,568)
+KevinDurant_FG <- c(306,306,587,661,794,711,643,731,849,238)
+DerrickRose_FG <- c(208,208,208,574,672,711,302,0,58,338)
+DwayneWade_FG <- c(699,472,439,854,719,692,416,569,415,509)
+FieldGoals <- rbind(KobeBryant_FG, JoeJohnson_FG, LeBronJames_FG,
+                    CarmeloAnthony_FG, DwightHoward_FG, ChrisBosh_FG, ChrisPaul_FG, KevinDurant_FG,
+                    DerrickRose_FG, DwayneWade_FG)
+rm(KobeBryant_FG, JoeJohnson_FG, LeBronJames_FG, CarmeloAnthony_FG,
+   DwightHoward_FG, ChrisBosh_FG, ChrisPaul_FG, KevinDurant_FG, DerrickRose_FG,
+   DwayneWade_FG)
+colnames(FieldGoals) <- Seasons
+rownames(FieldGoals) <- Players
 #And yet Chris Paul's accuracy is one of the highest
 #Chances are his team would get more points if he had more FTA's
 #Also notice that Dwight Howard's FT Accuracy is extremely poor
@@ -118,24 +135,23 @@ myplot(FieldGoals/FieldGoalAttempts)
 #We will see just now...
 
 #Part 3 - Player Style Patterns Excluding Free Throws
-myplot((_-_)/_)
-#Because we have excluded free throws, this plot now shows us
-#the true representation of player style change. We can verify
-#that this is the case because all the marks without exception
-#on this plot are between 2 and 3. That is because Field Goals
-#can only be for either 2 points or 3 points.
-#Insights:
-#1. You can see how players' preference for 2 or 3 point shots
-#   changes throughout their career. We can see that almost all
-#   players in this dataset experiment with their style throughout
-#   their careers. Perhaps, the most drastic change in style has
-#   been experienced by Joe Johnson.
-#2. There is one exception. You can see that one player has not
-#   changed his style at all - almost always scoring only 2-pointers.
-#   Who is this mystert player? It's Dwight Howard! 
-#   Now that explains a lot. The reason that Dwight Howard's
-#   Field Goal accuracy is so good is because he almost always
-#   scores 2-pointers only. That means he can be close to the basket
-#   or even in contact with it. Free throws, on the other hand require
-#   the player to stand 15ft (4.57m) away from the hoop. That's 
-#   probably why Dwight Howard's Free Throw Accuracy is poor.
+KobeBryant_FGA <- c(2173,1757,1690,1712,1569,1639,1336,1595,73,713)
+JoeJohnson_FGA <- c(1395,1139,1497,1420,1386,1161,931,1052,1018,1025)
+LeBronJames_FGA <- c(1823,1621,1642,1613,1528,1485,1169,1354,1353,1279)
+CarmeloAnthony_FGA <- c(1572,1453,1481,1207,1502,1503,1025,1489,1643,806)
+DwightHoward_FGA <- c(881,873,974,979,834,1044,726,813,800,423)
+ChrisBosh_FGA <- c(1087,1094,1027,1263,1158,1056,807,907,953,745)
+ChrisPaul_FGA <- c(947,871,1291,1255,637,928,890,856,870,1170)
+KevinDurant_FGA <- c(647,647,1366,1390,1668,1538,1297,1433,1688,467)
+DerrickRose_FGA <- c(436,436,436,1208,1373,1597,695,0,164,835)
+DwayneWade_FGA <- c(1413,962,937,1739,1511,1384,837,1093,761,1084)
+#Matrix
+FieldGoalAttempts <- rbind(KobeBryant_FGA, JoeJohnson_FGA, LeBronJames_FGA,
+                           CarmeloAnthony_FGA, DwightHoward_FGA, ChrisBosh_FGA, ChrisPaul_FGA,
+                           KevinDurant_FGA, DerrickRose_FGA, DwayneWade_FGA)
+rm(KobeBryant_FGA, JoeJohnson_FGA, LeBronJames_FGA, CarmeloAnthony_FGA,
+   DwightHoward_FGA, ChrisBosh_FGA, ChrisPaul_FGA, KevinDurant_FGA, DerrickRose_FGA,
+   DwayneWade_FGA)
+colnames(FieldGoalAttempts) <- Seasons
+rownames(FieldGoalAttempts) <- Players
+myplot(FieldGoals/FieldGoalAttempts)#Because we have excluded free throws, this plot now shows us

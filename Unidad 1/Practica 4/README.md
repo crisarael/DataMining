@@ -1,2 +1,2 @@
 # DataMining
-Practicas en minería de datos
+Practica #4 realizada en la unidad 1 de mineria de datos
