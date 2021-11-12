@@ -6,14 +6,12 @@ getwd()
 # importing the data with which we are going to work
 movies <- read.csv("Project-Data.csv")
 
+#We show a compact form the content and make a summary of the model
 str(movies)
 summary(movies)
 
 
 # filtering the data, because not all the data present in the document is used
-
-
-#filterin Genre
 filtGenre <- movies$Genre %in% c("action","adventure","animation","comedy","drama")
 
 
@@ -28,11 +26,9 @@ Resultmovies <- filtermovies[filterStudio,]
 
 
 #rename columns
-
 colnames(Resultmovies) <- c("Dayofweek", "Director", "Genre", "MovieTitle", "RealseDate", "Studio","AdjustedGroosMill","BudgetMill", "GrossMill","IMDbRating", "MovieLensRating", "OverseasMill","Overseas", "ProfitMill", "Profit", "RuntimeMin", "UsMill", "GrossUS")
 
 #Create transparent color
-
 mycol <- rgb(0, 0, 255, max = 255, alpha = 125, names = "blue50")
 
 # installing and importing the library ggplot2 
@@ -41,8 +37,6 @@ install.packages('ggplot2')
 library(ggplot2)
 
 #creating a scatter plot
-
-
 Graphic <- ggplot(data = Resultmovies,mapping = aes(x=Genre, y=GrossUS)) + 
   labs(title='Domestic Gross % by Genre') + 
   theme(axis.title.x = element_text(color = "Purple", size=20),
