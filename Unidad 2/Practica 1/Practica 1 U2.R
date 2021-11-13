@@ -21,8 +21,8 @@ graphic_scatter<-ggplot(stats) +
   aes(x=Mean, y=N., color=Country) +
   geom_point() + facet_grid(Gender~.)
 
-#see Facet Grid 
-graphic_scatter
+#see themed diagram
+graphic_scatter+ theme_dark()
 
 
 
