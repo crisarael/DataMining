@@ -32,7 +32,6 @@ plot(1:10,
      ylab = 'WCSS')
 ```
 We plot the Elbow method with the values of each cluster, the type refers to what is going to be plotted, l is linear, p is point, and b is both.
-![Imgur](https://imgur.com/SiBcgLn.png)
 
 This method serves to identify the optimal number of K, in the graph is the "elbow point", where the rate of descent is "sharpened".
 
